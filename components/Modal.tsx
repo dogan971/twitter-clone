@@ -15,10 +15,12 @@ const Modal = (props: ModalProps) => {
   const handleClose = useCallback(() => {
     if (props.disabled) return;
     props.onClose();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.disabled, props.onClose]);
   const handleSubmit = useCallback(() => {
     if (props.disabled) return;
     props.onSubmit();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [props.disabled, props.onSubmit]);
   if (!props.isOpen) return null;
   return (
